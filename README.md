@@ -70,3 +70,70 @@ Run HeatMapDataReader.py.
 
 It will replot the graphs based on the saved .csv file.
 
+📜 README Update: New Files Added
+📂 New Files:
+1. HeatMapDataReaderV2.py
+Description:
+
+Loads a recorded .csv data file containing voltage readings from a MUX-controlled photoresistor array.
+
+Automatically detects the layout (e.g., 4×4, 16×2, etc.).
+
+Opens three graphs simultaneously:
+
+Averaged Heatmap: Mean voltage across entire recording for each sensor.
+
+Full Time Series Plot: Voltage vs. time for all channels across the whole duration.
+
+Interactive Heatmap Replay: A heatmap that updates manually based on time steps.
+
+Provides a manual "Previous" and "Next" button to step through the recording frame-by-frame.
+
+Allows the user to set a custom "Seconds per Click" to control how fast they navigate through time.
+
+Main New Features:
+
+Simultaneous opening of all graphs (no closing needed between them).
+
+Manual step-through replay (instead of automatic animation).
+
+Customizable time stepping (e.g., 5 seconds per click).
+
+Clear indication of current time on heatmap title.
+
+2. HeatMapReaderV_2.py
+Description:
+
+Handles incoming real-time data from Arduino or simulated readings.
+
+Updated to:
+
+Allow dynamic selection of grid layout (rows × columns) at startup.
+
+Let user set colorbar minimum and maximum voltage values.
+
+Allow flexible configuration of recording parameters (duration, refresh rate, save file name).
+
+Improved save functionality:
+
+After the recording ends, the user manually picks where and how to save the .csv file.
+
+No automatic saving into pre-defined folders.
+
+Only plots the live real-time heatmap during acquisition to focus on real-time performance.
+
+Main New Features:
+
+Clean startup GUI for easy parameter setup.
+
+Manual file saving after data recording (no forced folders).
+
+Live updating heatmap with flexible dimensions (any MUX configuration like 4×4, 8×2, 16×2, etc.).
+
+Safely handles faulty data without crashing.
+
+📋 In Summary:
+
+File	Purpose
+HeatMapDataReaderV2.py	Analyze and visualize saved data: averaged heatmap, full time series, manual replay navigation
+HeatMapReaderV_2.py	Live real-time reading and visualization from Arduino or simulator, with manual saving
