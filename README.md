@@ -6,14 +6,14 @@ It is designed to test and demonstrate how voltage readings from multiple photor
 
 The system has three main parts:
 
-ArduinoFakeDataReads.ino — Arduino code that simulates reading 16 photoresistors and sends fake voltage values.
+ArduinoFakeData16Reads.ino — Arduino code that simulates reading 16 photoresistors and sends fake voltage values.
 
 PythonHeatMap.py — Python program that connects to the Arduino, reads incoming Serial data live, graphs it in real time, and saves the data.
 
 HeatMapDataReader.py — Python program that reads the saved .csv data file later and displays the graphs again offline.
 
 Files and Their Roles
-1. ArduinoFakeDataReads.ino
+1. ArduinoFakeData16Reads.ino
 Simulates 16 photoresistor voltage readings (0–5V).
 
 Sends data to Serial in the format:
@@ -54,7 +54,7 @@ Heatmap of average voltages across the entire recording.
 Lets you analyze old data without needing the Arduino connected.
 
 How to Use
-Upload ArduinoFakeDataReads.ino to your Arduino.
+Upload ArduinoFakeData16Reads.ino to your Arduino.
 
 Run PythonHeatMap.py on your computer.
 
